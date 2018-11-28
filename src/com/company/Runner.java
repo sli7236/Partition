@@ -12,8 +12,7 @@ public class Runner {
 
         System.out.println("Random Integer Array: " + stringArr);
         long time = System.nanoTime();
-	    quickSort.quickSort(randIntArr, 0, randIntArr.length-1);
-        System.out.println();
+        quickSort.quickSort(randIntArr, 0, randIntArr.length-1);
         System.out.print("Quick Sort: ");
         for (int i = 0; i < randIntArr.length; i++)
         {
