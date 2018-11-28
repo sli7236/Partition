@@ -1,9 +1,22 @@
 package com.company;
 
-public class Partition {
+public class quickSort {
+
+    public static void quickSort(int[] arr, int left, int right)
+    {
+        if (left < right)
+        {
+            int pivot = Partition(arr, left, right);
+
+            quickSort(arr, left, pivot -1);
+            quickSort(arr, pivot+1, right);
+        }
+
+    }
+
     public static int Partition(int[] arr, int left, int right)
     {
-        int pivot = right;
+        int pivot = arr[right];
         int i = left - 1;
         for (int j = left; j < right; j++)
         {
@@ -20,15 +33,5 @@ public class Partition {
         return i + 1;
     }
 
-    public static void quickSort(int[] arr, int left, int right)
-    {
-        if (left < right)
-        {
-            int index = Partition(arr, left, right);
 
-            quickSort(arr, left, index -1);
-            quickSort(arr, index+1, right);
-        }
-
-    }
 }

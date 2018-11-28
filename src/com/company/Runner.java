@@ -3,15 +3,16 @@ package com.company;
 public class Runner {
 
     public static void main(String[] args) {
-        int[] randIntArr = randomIntArr(100);
+        int[] randIntArr = randomIntArr(10);
         String stringArr = "";
         for (int i = 0; i < randIntArr.length; i++)
         {
-            stringArr = stringArr + randIntArr[i] + ", ";
+            stringArr = stringArr + randIntArr[i] + " ";
         }
-        long time = System.nanoTime();
+
         System.out.println("Random Integer Array: " + stringArr);
-	    System.out.println(Partition.Partition(randIntArr, 0, randIntArr.length-1));
+        long time = System.nanoTime();
+	    quickSort.quickSort(randIntArr, 0, randIntArr.length-1);
         System.out.println();
         System.out.print("Quick Sort: ");
         for (int i = 0; i < randIntArr.length; i++)
